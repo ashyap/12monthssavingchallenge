@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/skeleton.css">
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/populateSavingsTable.js"></script>
+  </head>
+  <body onload="populateSavingsTable('easy',10000)">
+    <header>
+      <div class="row">
+        <div class="12 columns">
+          <h4>12 Months Saving Challenge Calculator</h4>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+        <div class="four columns">
+          <form>
+            <div class="row">
+              <label for="salary">Your Salary</label>
+              <input class="u-full-width" name="salary" type="text" value=10000 placeholder="10000" id="salary">
+            </div>
+            <div class="row">
+              <label for="mode">Challenge Mode</label>
+              <select class="u-full-width" id="mode" name="mode" onchange="populateSavingsTable(this.form.mode.value,this.form.salary.value)">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="four columns">
+          <div class="row">
+            <table id="savings" class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>% to Save</th>
+                  <th>Savings for the Month</th>
+                </tr>
+              </thead>
+              <tbody id="savings-content" onload="populateSavingsTable('easy',10000)">
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="four columns">
+          <div id="savingsContainer">
+            <label>Your Savings</label>
+            <p id="savingsLabel"></p>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
