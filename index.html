@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/skeleton.css">
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/colors.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/populateSavingsTable.js"></script>
@@ -27,11 +28,14 @@
               </div>
               <div class="row">
                 <label for="mode">Challenge Mode</label>
-                <select class="u-full-width" id="mode" name="mode" onchange="populateSavingsTable(this.form.mode.value,this.form.salary.value)">
+                <select class="u-full-width" id="mode" selected="easy" name="mode">
                   <option value="easy">Easy</option>
                   <option value="medium">Medium</option>
                   <option value="hard">Hard</option>
                 </select>
+              </div>
+              <div class="row">
+                <a class="button" onclick="populateSavingsTable()">Calculate</a>
               </div>
             </form>
           </div>
@@ -60,5 +64,12 @@
           </div>
         </div>
     </div>
+    <footer>
+      <div class="12 columns">
+        <ul id="contacts">
+          <li><a href="https://ph.linkedin.com/in/sashmir-yap-1834a366" title=""><span class="fa fa-linkedin"></span></a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

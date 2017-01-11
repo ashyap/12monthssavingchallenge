@@ -1,3 +1,14 @@
+#contacts{
+  list-style: none;
+  text-align: right;
+  padding-right: 5em;
+  color: white;
+}
+
+#contacts li{
+  display: inline
+}
+
 form{
   background: var(--darkblue);
   border: 0 none;
@@ -8,6 +19,16 @@ form{
 
 form label{
   color: white;
+}
+
+.button{
+  width: 100%;
+  color: white;
+}
+
+.button:hover{
+  color:var(--lightblue);
+  border-color: var(--lightblue);
 }
 
 html {

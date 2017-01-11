@@ -1,5 +1,6 @@
-function populateSavingsTable(mode, salary){
-  console.log(mode)
+function populateSavingsTable(){
+  var salary = document.getElementById('salary').value;
+  var mode = document.getElementById('mode').value;
   var startPercentageSavings = .01;
   if(mode == "medium"){
     startPercentageSavings = .05;
