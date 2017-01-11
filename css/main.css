@@ -41,12 +41,28 @@ h4 {
 
 table{
   background: var(--darkblue);
-  border: 0 none;
+  border: 25px solid var(--darkblue);
 	border-radius: 5px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-  padding: 40px;
+  padding: 80px;
 }
 
 th, td{
   color: white;
+}
+
+@media (min-width: 400px) {
+  .one-third.column{
+    width:100%;
+  }
+
+  .column:first-child, .columns:first-child{
+    margin-left: 2em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .one-third.column{
+    width:28%;
+  }
 }

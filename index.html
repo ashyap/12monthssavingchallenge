@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/skeleton.css">
     <link rel="stylesheet" href="./css/colors.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -17,23 +18,25 @@
       </div>
     </header>
     <div class="container">
-        <div class="four columns">
-          <form>
-            <div class="row">
-              <label for="salary">Your Salary</label>
-              <input class="u-full-width" name="salary" type="text" value=10000 placeholder="10000" id="salary">
-            </div>
-            <div class="row">
-              <label for="mode">Challenge Mode</label>
-              <select class="u-full-width" id="mode" name="mode" onchange="populateSavingsTable(this.form.mode.value,this.form.salary.value)">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-              </select>
-            </div>
-          </form>
+        <div class="one-third column">
+          <div class="row">
+            <form>
+              <div class="row">
+                <label for="salary">Your Salary</label>
+                <input class="u-full-width" name="salary" type="text" value=10000 placeholder="10000" id="salary">
+              </div>
+              <div class="row">
+                <label for="mode">Challenge Mode</label>
+                <select class="u-full-width" id="mode" name="mode" onchange="populateSavingsTable(this.form.mode.value,this.form.salary.value)">
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="four columns">
+        <div class="one-third column">
           <div class="row">
             <table id="savings" class="u-full-width">
               <thead>
@@ -48,10 +51,12 @@
             </table>
           </div>
         </div>
-        <div class="four columns">
-          <div id="savingsContainer">
-            <label>Your Savings</label>
-            <p id="savingsLabel"></p>
+        <div class="one-third column">
+          <div class="row">
+            <div id="savingsContainer">
+              <label>Your Savings</label>
+              <p id="savingsLabel"></p>
+            </div>
           </div>
         </div>
     </div>
